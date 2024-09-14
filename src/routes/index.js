@@ -10,7 +10,7 @@ router.get("/img", async (req,res) => {
     const request = await unsplash.photos.getRandom({
         query: 'dog'
     })
-    return res.status(200).json({urlImg: request.response.urls.small_s3})
+    return res.status(200).json({urlImg: request.response.urls.raw})
 })
 
 export default router
